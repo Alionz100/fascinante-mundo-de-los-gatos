@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Fascinante Mundo de los Gatos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: #FFCC00;
+            color: #000000;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            letter-spacing: 2px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            top: 60px; /* Space for the fixed header */
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 15px 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        /* Main content layout */
+        main {
+            margin-left: 220px; /* Space for the fixed nav */
+            padding-top: 80px; /* Space for the fixed header */
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        article {
+            background-color: #444;
+            color: #FFF;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        article h3 {
+            color: #FFCC00;
+            text-decoration: underline;
+            font-size: 1.5em;
+        }
+
+        article p {
+            line-height: 1.6;
+        }
+
+        /* Section-specific styles */
+        .section-title {
+            color: #0077FF;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .section-list {
+            font-size: 18px;
+            list-style-type: square;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #E6E6E6;
+            color: #666;
+            font-family: Georgia, serif;
+            text-align: center;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Identificador */
+        #personal-info {
+            font-style: italic;
+        }
+
+        /* Larger text class */
+        .larger-text {
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Links */
+        a {
+            color: #FFCC00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0077FF;
+            color: #FFFFFF;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #D9EAF7;
+        }
+
+        /* Bold and italic text */
+        .bold-italic {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Hover effect for articles */
+        article:hover {
+            background-color: #555;
+        }
+
+        /* Carousel image size */
+        .carousel-item img {
+            width: 100%;
+            height: 500px; /* Ajusta la altura según sea necesario */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>El Fascinante Mundo de los Gatos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#comportamiento">Comportamiento</a></li>
+            <li><a href="#cuidados">Cuidados</a></li>
+            <li><a href="#razas">Razas</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/foto-gratis/adorable-gatito-gafas-sol_23-2150886412.jpg?w=1380&t=st=1718222102~exp=1718222702~hmac=5c03876f8f3f4c68766ef1470abc39874f1cb9804dd72a94f3d7afa48053d067" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/foto-gratis/adorable-gatito-britanico-pelo-corto-pared-monocromatica-detras-ella_23-2148955093.jpg?w=1380&t=st=1718222198~exp=1718222798~hmac=244f087a513d910621d56ac4e8e63bfd7f53586563c9460863af7fa546fc2968" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/fotos-premium/gato-gafas-sol-gestando-dedo-arriba_872074-17731.jpg?size=626&ext=jpg&ga=GA1.1.701666096.1713653919&semt=ais_user" class="d-block w-100" alt="Imagen 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/foto-gratis/vista-animal-gracioso_23-2151098330.jpg?size=626&ext=jpg&ga=GA1.1.701666096.1713653919&semt=ais_user" class="d-block w-100" alt="Imagen 4">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <section id="historia">
+            <article>
+                <h3>Historia y Evolución de los Gatos</h3>
+                <p>Los gatos han sido compañeros del ser humano durante miles de años. Los primeros indicios de la domesticación de los gatos datan de hace unos <span class="bold-italic">9,500 años</span> en el Oriente Medio, en la región conocida como la <span class="bold-italic">Media Luna Fértil</span>. Los gatos salvajes fueron atraídos a los asentamientos humanos debido a la abundancia de roedores, y con el tiempo, una relación simbiótica comenzó a desarrollarse.</p>
+                <p>Los <span class="bold-italic">egipcios</span> fueron una de las primeras civilizaciones en domesticar gatos, y estos animales eran <span class="bold-italic">venerados</span> y considerados sagrados. Se creía que los gatos tenían propiedades <span class="bold-italic">mágicas</span> y <span class="bold-italic">protectoras</span>, y eran frecuentemente asociados con la diosa Bastet, la deidad de la <span class="bold-italic">fertilidad</span> y el <span class="bold-italic">hogar</span>.</p>
+                <p>A lo largo de la historia, los gatos han sido tanto <span class="bold-italic">adorados</span> como <span class="bold-italic">demonizados</span>. Durante la Edad Media en Europa, se asociaban con la <span class="bold-italic">brujería</span> y eran perseguidos, lo que paradójicamente llevó a un aumento en la población de roedores y a la propagación de enfermedades como la <span class="bold-italic">peste bubónica</span>.</p>
+                <ul class="section-list">
+                    <li><span class="bold-italic">Orígenes:</span> La domesticación inicial en la Media Luna Fértil.</li>
+                    <li><span class="bold-italic">Antiguo Egipto:</span> La veneración y los roles sagrados de los gatos.</li>
+                    <li><span class="bold-italic">Edad Media:</span> La persecución y las supersticiones en torno a los gatos.</li>
+                    <li><span class="bold-italic">Edad Moderna:</span> La adopción de los gatos como mascotas en la era contemporánea.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="comportamiento">
+            <article>
+                <h3>Comportamiento Felino</h3>
+                <p>El comportamiento de los gatos es <span class="bold-italic">único</span> y a menudo <span class="bold-italic">misterioso</span>. Desde su tendencia a <span class="bold-italic">marcar territorio</span> hasta su habilidad para <span class="bold-italic">cazar</span>, los gatos exhiben una amplia gama de comportamientos instintivos.</p>
+                <p>Uno de los comportamientos más conocidos es el <span class="bold-italic">ronroneo</span>, que generalmente indica satisfacción y comodidad, aunque también puede ocurrir cuando el gato está enfermo o estresado.</p>
+                <p>Los gatos son territoriales por naturaleza y a menudo marcan su territorio mediante el roce de su cara y cuerpo contra objetos, depositando feromonas producidas por las glándulas en su piel. También pueden marcar con arañazos y, en algunos casos, con orina.</p>
+                <ul class="section-list">
+                    <li><span class="bold-italic">Marcar Territorio:</span> El uso de feromonas para establecer su dominio.</li>
+                    <li><span class="bold-italic">Ronroneo:</span> Las diversas razones detrás de este sonido característico.</li>
+                    <li><span class="bold-italic">Comunicación:</span> Las vocalizaciones y lenguaje corporal de los gatos.</li>
+                    <li><span class="bold-italic">Comportamiento de Caza:</span> Instintos y hábitos depredadores.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="cuidados">
+            <article>
+                <h3>Cuidados y Alimentación</h3>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Descripción</th>
+                    </tr>
+                    <tr style="background-color: #D9EAF7;">
+                        <td><span class="bold-italic">Alimentación</span></td>
+                        <td>Una dieta balanceada es crucial para la salud de tu gato. Incluye proteínas, grasas y carbohidratos en las proporciones adecuadas. Los gatos son carnívoros obligados, lo que significa que requieren una dieta rica en proteínas animales.</td>
+                    </tr>
+                    <tr style="background-color: #D9EAF7;">
+                        <td><span class="bold-italic">Visitas al veterinario</span></td>
+                        <td>Es importante llevar a tu gato al veterinario al menos una vez al año para chequeos regulares y vacunas. Las visitas frecuentes pueden ayudar a detectar problemas de salud temprano.</td>
+                    </tr>
+                    <tr style="background-color: #D9EAF7;">
+                        <td><span class="bold-italic">Higiene</span></td>
+                        <td>Mantén una rutina de limpieza para tu gato, incluyendo el cepillado regular de su pelaje y el cuidado de sus uñas. Los gatos son animales muy limpios y dedican una parte significativa de su tiempo a acicalarse.</td>
+                    </tr>
+                    <tr style="background-color: #D9EAF7;">
+                        <td><span class="bold-italic">Ejercicio</span></td>
+                        <td>El ejercicio es importante para la salud física y mental de tu gato. Juega con él regularmente y proporciona juguetes que estimulen su instinto de caza.</td>
+                    </tr>
+                </table>
+                <p>Para más información sobre el cuidado de los gatos, visita <a href="https://www.20minutos.es/imagenes/animaleros/gatos/5160788-todos-los-cuidados-basicos-que-conocer-para-convivir-felizmente-con-gatos/" target="_blank">20minutos</a>.</p>
+            </article>
+        </section>
+
+        <section id="razas">
+            <article>
+                <h3>Razas Populares</h3>
+                <p>Hay muchas razas de gatos, cada una con sus propias características y personalidad. Algunas de las razas más populares incluyen:</p>
+                <ul class="section-list">
+                    <li><span class="bold-italic">Siamés:</span> Conocido por su carácter vocal y sociable, el siamés es una de las razas más antiguas y fácilmente reconocibles por su pelaje claro y puntos oscuros en las orejas, cara, patas y cola.</li>
+                    <li><span class="bold-italic">Persa:</span> Con su pelaje largo y denso, y su cara plana, el gato persa es apreciado por su apariencia regia y su temperamento tranquilo.</li>
+                    <li><span class="bold-italic">Gato de Bengala:</span> Esta raza tiene un aspecto salvaje con un pelaje que recuerda al de un leopardo, pero son conocidos por ser activos y juguetones.</li>
+                    <li><span class="bold-italic">Ragdoll:</span> Conocidos por su temperamento relajado y amistoso, los ragdolls son gatos grandes con ojos azules y pelaje suave y semi-largo.</li>
+                </ul>
+                <p>Para más información sobre diferentes razas de gatos, puedes visitar <a href="https://www.expertoanimal.com/razas-de-gatos.html" target="_blank">ExpertoAnimal</a>.</p>
+            </article>
+        </section>
+
+        <section id="curiosidades">
+            <article>
+                <h3>Curiosidades Felinas</h3>
+                <p>Los gatos son animales fascinantes y hay muchas curiosidades sobre ellos que te sorprenderán:</p>
+                <ul class="section-list">
+                    <li><span class="bold-italic">Rotación de Orejas:</span> Los gatos pueden rotar sus orejas 180 grados y tienen 32 músculos en cada oreja.</li>
+                    <li><span class="bold-italic">Propiedades Curativas del Ronroneo:</span> Las frecuencias del ronroneo pueden ayudar en la cicatrización de huesos y tejidos.</li>
+                    <li><span class="bold-italic">Órgano de Jacobson:</span> Un órgano especial que les permite saborear los olores.</li>
+                    <li><span class="bold-italic">Diferencia con los Perros:</span> Los gatos no tienen papilas gustativas para el sabor dulce.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2 id="personal-info">Información Personal</h2>
+        <p>Nombre: Santiago Mesa Gaviria</p>
+        <p>Edad: 16 años</p>
+        <p>Ubicación: Caldas, Antioquia, Colombia</p>
+        <p>Contacto: 3156416411</p>
+        <p>Correo electrónico: <a href="mailto:santiagomesagaviria@gmail.com">santiagomesagaviria@gmail.com</a></p>
+        <p>Institución: Skolmi</p>
+        <img src="https://miplataformaeducativa.skolmi.com/pluginfile.php/92516/user/icon/adaptable/f1?rev=2984639" alt="Imagen de Santiago Mesa Gaviria" class="img-fluid rounded-circle" width="203"> 
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
